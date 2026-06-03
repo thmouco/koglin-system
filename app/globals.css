@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 53% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 53% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 53% 15%;
+    --primary: 215 100% 14%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 14% 95%;
+    --secondary-foreground: 215 53% 15%;
+    --muted: 215 14% 95%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 42 100% 49%;
+    --accent-foreground: 215 100% 14%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 14% 90%;
+    --input: 215 14% 90%;
+    --ring: 215 100% 14%;
+    --radius: 0.375rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Sidebar active state */
+.sidebar-link-active {
+  background-color: rgba(252, 185, 0, 0.15);
+  color: #fcb900;
+  border-left: 3px solid #fcb900;
+}
+
+/* Badge pulse animation for new tickets */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.badge-pulse {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
