@@ -49,7 +49,7 @@ export function GroupsClient({ groups: initial, guides }: Props) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
-    const payload = { name, description: description || null, guide_id: guideId || null }
+    const payload = { name, description: description || undefined, guide_id: guideId || undefined }
 
     if (editing) {
       const { error } = await supabase.from('groups').update(payload).eq('id', editing.id)
