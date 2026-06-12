@@ -27,7 +27,7 @@ const navSections: NavSection[] = [
     label: 'Principal',
     roles: ['admin', 'collaborator', 'guide'],
     items: [
-      { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard, roles: ['admin', 'collaborator'] },
+      { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard, roles: ['admin', 'collaborator', 'guide'] },
       { href: '/clients', label: 'Clientes', icon: Building2, roles: ['admin', 'collaborator'] },
       { href: '/groups', label: 'Grupos', icon: Map, roles: ['admin', 'collaborator'] },
       { href: '/passengers', label: 'Passageiros', icon: Users, roles: ['admin', 'collaborator', 'guide'] },
